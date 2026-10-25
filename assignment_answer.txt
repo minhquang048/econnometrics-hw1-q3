@@ -1,0 +1,24 @@
+QUESTION 3 (n = 141)
+
+(i) OLS: colGPA_hat = 1.3565 + 0.4130 hsGPA + 0.0133 ACT
+                     - 0.0710 skipped + 0.1244 PC.
+Residuals = colGPA - colGPA_hat; first three: 0.2665, 0.4018,
+-0.1901 (all saved in observation_results.csv).
+
+(ii) White test: LM = 6.9576, p = 0.0308; reject homoskedasticity
+at 5%. Fitted variances: h_hat = -0.32184 + 0.12960 colGPA_hat
++ 0.002946 colGPA_hat^2.
+
+(iii) All h_hat > 0 (minimum = 0.02738). With weights 1/h_hat,
+WLS coefficients (constant, hsGPA, ACT, skipped, PC) are
+(1.4016, 0.4025, 0.0132, -0.0764, 0.1260).
+Skipped becomes slightly more negative (-0.0710 to -0.0764);
+PC barely changes (0.1244 to 0.1260). Skipped remains significant
+at 1% (OLS/WLS p = 0.0077/0.0008); PC remains significant at 5%
+(p = 0.0316/0.0269).
+
+(iv) WLS HC1 robust SEs (same order):
+(0.3106, 0.0863, 0.0104, 0.0212, 0.0590).
+Changes are small (all within 6%): skipped SE falls from 0.0222
+to 0.0212; PC SE rises from 0.0563 to 0.0590. Significance is
+unchanged (robust p: skipped = 0.00044; PC = 0.0346).

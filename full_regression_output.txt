@@ -1,0 +1,119 @@
+OLS
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 colGPA   R-squared:                       0.259
+Model:                            OLS   Adj. R-squared:                  0.237
+Method:                 Least Squares   F-statistic:                     11.90
+Date:                Sun, 25 Oct 2026   Prob (F-statistic):           2.55e-08
+Time:                        06:28:01   Log-Likelihood:                -39.098
+No. Observations:                 141   AIC:                             88.20
+Df Residuals:                     136   BIC:                             102.9
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          1.3565      0.328      4.142      0.000       0.709       2.004
+hsGPA          0.4130      0.092      4.468      0.000       0.230       0.596
+ACT            0.0133      0.010      1.278      0.204      -0.007       0.034
+skipped       -0.0710      0.026     -2.706      0.008      -0.123      -0.019
+PC             0.1244      0.057      2.171      0.032       0.011       0.238
+==============================================================================
+Omnibus:                        1.756   Durbin-Watson:                   1.875
+Prob(Omnibus):                  0.416   Jarque-Bera (JB):                1.403
+Skew:                          -0.031   Prob(JB):                        0.496
+Kurtosis:                       2.515   Cond. No.                         300.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+WHITE AUXILIARY
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.049
+Model:                            OLS   Adj. R-squared:                  0.036
+Method:                 Least Squares   F-statistic:                     3.581
+Date:                Sun, 25 Oct 2026   Prob (F-statistic):             0.0305
+Time:                        06:28:01   Log-Likelihood:                 96.141
+No. Observations:                 141   AIC:                            -186.3
+Df Residuals:                     138   BIC:                            -177.4
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const             -0.3218      2.006     -0.160      0.873      -4.288       3.644
+fitted             0.1296      1.317      0.098      0.922      -2.474       2.733
+fitted_squared     0.0029      0.216      0.014      0.989      -0.423       0.429
+==============================================================================
+Omnibus:                       86.169   Durbin-Watson:                   2.062
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              394.216
+Skew:                           2.304   Prob(JB):                     2.50e-86
+Kurtosis:                       9.772   Cond. No.                     2.31e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.31e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+WLS
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:                 colGPA   R-squared:                       0.306
+Model:                            WLS   Adj. R-squared:                  0.286
+Method:                 Least Squares   F-statistic:                     15.01
+Date:                Sun, 25 Oct 2026   Prob (F-statistic):           3.49e-10
+Time:                        06:28:01   Log-Likelihood:                -35.364
+No. Observations:                 141   AIC:                             80.73
+Df Residuals:                     136   BIC:                             95.47
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          1.4016      0.298      4.696      0.000       0.811       1.992
+hsGPA          0.4025      0.083      4.828      0.000       0.238       0.567
+ACT            0.0132      0.010      1.339      0.183      -0.006       0.033
+skipped       -0.0764      0.022     -3.444      0.001      -0.120      -0.033
+PC             0.1260      0.056      2.237      0.027       0.015       0.237
+==============================================================================
+Omnibus:                        0.838   Durbin-Watson:                   1.866
+Prob(Omnibus):                  0.658   Jarque-Bera (JB):                0.885
+Skew:                           0.049   Prob(JB):                        0.642
+Kurtosis:                       2.624   Cond. No.                         284.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+WLS HC1
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:                 colGPA   R-squared:                       0.306
+Model:                            WLS   Adj. R-squared:                  0.286
+Method:                 Least Squares   F-statistic:                     21.23
+Date:                Sun, 25 Oct 2026   Prob (F-statistic):           1.27e-13
+Time:                        06:28:01   Log-Likelihood:                -35.364
+No. Observations:                 141   AIC:                             80.73
+Df Residuals:                     136   BIC:                             95.47
+Df Model:                           4                                         
+Covariance Type:                  HC1                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          1.4016      0.311      4.512      0.000       0.787       2.016
+hsGPA          0.4025      0.086      4.662      0.000       0.232       0.573
+ACT            0.0132      0.010      1.264      0.208      -0.007       0.034
+skipped       -0.0764      0.021     -3.601      0.000      -0.118      -0.034
+PC             0.1260      0.059      2.135      0.035       0.009       0.243
+==============================================================================
+Omnibus:                        0.838   Durbin-Watson:                   1.866
+Prob(Omnibus):                  0.658   Jarque-Bera (JB):                0.885
+Skew:                           0.049   Prob(JB):                        0.642
+Kurtosis:                       2.624   Cond. No.                         284.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
